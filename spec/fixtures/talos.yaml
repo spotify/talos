@@ -1,0 +1,10 @@
+unsafe_scopes: true
+
+scopes:
+  # lon3-puppet-a1: pod = lon3, site = lon3, role = puppet, pool = a
+  - match: '(?<pod>(?<site>[[:alpha:]]+)\d*)-(?<role>[a-z0-9]+)-(?<pool>[[:alpha:]]+)\d+'
+    facts:
+      environment: production
+  - match: 'cloud\.example\.com'
+    facts:
+      environment: testing

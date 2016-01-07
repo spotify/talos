@@ -1,0 +1,21 @@
+---
+:backends:
+  - yaml
+
+:hierarchy:
+    - 'fqdn/%{fqdn}'
+    - 'role/%{role}/%{environment}/%{pool}'
+    - 'role/%{role}/%{pool}'
+    - 'role/%{role}/%{environment}'
+    - 'role/%{role}'
+    - 'lsbdistcodename/%{lsbdistcodename}'
+    - 'domain/%{domain}'
+    - 'pod/%{pod}'
+    - 'site/%{site}'
+    - 'environment/%{environment}'
+    - common
+
+:yaml:
+  :datadir: spec/fixtures/master
+
+:logger: puppet

@@ -1,0 +1,4 @@
+sysadmin: 'sysadmin@example.com'
+classes:
+  - 'puppet'
+  - 'puppet::master'

@@ -36,7 +36,7 @@ class Talos < Sinatra::Base
     end
   end
 
-  configure :development do
+  configure :development, :test do
     require 'sinatra/reloader'
     register Sinatra::Reloader
     set :hiera, Hiera::Config::load(File.expand_path('spec/fixtures/hiera.yaml'))

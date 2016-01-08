@@ -159,7 +159,7 @@ participating, you are expected to honor this code.
 https://github.com/spotify/code-of-conduct/blob/master/code-of-conduct.md
 
 License
------------------
+-------
 ```text
 Copyright 2013-2016 Spotify AB
 

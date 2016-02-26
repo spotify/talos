@@ -5,7 +5,8 @@ Talos
 [![Build Status](https://travis-ci.org/spotify/talos.png?branch=master)](https://travis-ci.org/spotify/talos)
 
 Talos is a rack application which servers Hiera yaml files over HTTP.
-It authorizes clients based on the SSL certificates issued by the Puppet CA and returns only the files in the Hiera scope.
+It authorizes clients based on the SSL certificates issued by the Puppet CA and returns only the files in the
+[Hiera scope](https://docs.puppetlabs.com/hiera/3.0/command_line.html#json-and-yaml-scopes).
 
 Talos is used to store and distribute secrets via Hiera to the masterless puppet clients.
 
@@ -98,6 +99,11 @@ will return only the files that match the Hiera scope of the clients.
 Installing
 ----------
 
+You can use [spotify/talos](https://github.com/spotify/puppet-talos)
+puppet module to install Talos.
+
+### Manual installation
+
 First, install talos using rubygems:
 
     $ gem install talos
@@ -125,7 +131,7 @@ You can run Talos using Passenger or any other application server. Make
 sure you use Puppet SSL keys to validate the client certificates and to
 forward `SSL_CLIENT_S_DN_CN` header:
 
-```
+```apacheconf
 <VirtualHost *:443>
   DocumentRoot "/var/lib/talos/public"
 

@@ -3,10 +3,11 @@ rvm:
 - 1.9.3
 - 2.3.0
 - jruby-19mode
-- rbx-2
+- rbx-3
 deploy:
   provider: rubygems
   on:
     tags: true
   api_key:
     secure: XFUKxH18R6lT5In7phyVsL3a5mcESrssD2dlNrQvC2TXeBGif+0sSSt7ZfRuFve5XB0Wa8ruClFxRr0uMXRqUZUKc1/VbLM2DnLLkruK8pwdu2oQI3JMdcDtMmVsVxvJViAAy3ibuKuCTF2NbU+Yg/VrwMNU+aN63zsDR44t1IU=
+dist: trusty

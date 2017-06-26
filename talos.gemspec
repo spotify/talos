@@ -1,5 +1,5 @@
 Gem::Specification.new do |s|
-  s.version       = '0.1.4'
+  s.version       = '0.1.5'
   s.name          = 'talos'
   s.authors       = ['Alexey Lapitsky', 'Johan Haals']
   s.email         = 'alexey@spotify.com'
@@ -14,9 +14,9 @@ Gem::Specification.new do |s|
   s.require_paths = ['lib']
 
   s.add_dependency 'rack', '< 1.6'
-  s.add_dependency 'sinatra'
-  s.add_dependency 'hiera'
-  s.add_dependency 'archive-tar-minitar'
+  s.add_dependency 'sinatra', '~> 1.4.7'
+  s.add_dependency 'hiera', '~> 3.2.0'
+  s.add_dependency 'archive-tar-minitar', '~> 0.5.2'
   s.add_development_dependency 'rake'
   s.add_development_dependency 'sinatra-contrib'
   s.add_development_dependency 'rspec', '>= 2.9'

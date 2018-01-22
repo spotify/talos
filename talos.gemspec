@@ -1,12 +1,12 @@
 Gem::Specification.new do |s|
-  s.version       = '0.1.5'
+  s.version       = '0.1.6'
   s.name          = 'talos'
   s.authors       = ['Alexey Lapitsky', 'Johan Haals']
   s.email         = 'alexey@spotify.com'
   s.summary       = %q{Hiera secrets distribution over HTTP}
   s.description   = %q{Distribute compressed hiera yaml files to authenticated puppet clients over HTTP}
   s.homepage      = 'https://github.com/spotify/talos'
-  s.license       = 'Apache 2.0'
+  s.license       = 'Apache-2.0'
 
   s.files         = `git ls-files`.split($\)
   s.executables   = s.files.grep(%r{^bin/}).map{ |f| File.basename(f) }

@@ -102,6 +102,7 @@ class Talos < Sinatra::Base
     files_to_pack = files_in_scope(scope)
     archive = compress_files(files_to_pack)
     content_type 'application/x-gzip'
+    headers['content-encoding'] = 'gzip'
     archive.string
   end
 

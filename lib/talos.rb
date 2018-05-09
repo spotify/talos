@@ -24,9 +24,11 @@ require 'archive/tar/minitar'
 require 'pathname'
 include Archive::Tar
 
+
 class Talos < Sinatra::Base
   def self.prepare_config(path)
     set :talos, YAML.load_file(path)
+    settings.talos['ssl'] = true if settings.talos['ssl'].nil?
     settings.talos['scopes'].each do |scope_config|
       begin
         scope_config['regexp'] = Regexp.new(scope_config['match'])
@@ -47,6 +49,7 @@ class Talos < Sinatra::Base
   configure :production do
     set :hiera, Hiera::Config::load(File.expand_path('/etc/talos/hiera.yaml'))
     prepare_config('/etc/talos/talos.yaml')
+    warn("SECURITY WARNING: use of ssl is disabled, client requests cannot be authenticated") if !settings.talos['ssl']
     warn("SECURITY WARNING: unsafe_scopes are enabled, SSL authentication bypass is possible") if settings.talos['unsafe_scopes']
   end
 
@@ -97,7 +100,7 @@ class Talos < Sinatra::Base
   end
 
   get '/' do
-    fqdn = settings.development? ? params[:fqdn] : request.env['HTTP_SSL_CLIENT_S_DN_CN']
+    fqdn = (settings.development? || !settings.talos['ssl']) ? params[:fqdn] : request.env['HTTP_SSL_CLIENT_S_DN_CN']
     scope = get_scope(fqdn)
     files_to_pack = files_in_scope(scope)
     archive = compress_files(files_to_pack)

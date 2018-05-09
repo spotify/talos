@@ -55,6 +55,7 @@ scopes:
       environment: testing
 
 unsafe_scopes: true
+ssl: true
 ```
 
 When receiving a request, Talos iterates over `scopes` list and matches
@@ -70,6 +71,9 @@ scope on collision.
 
 If `unsafe_scopes` option is enabled, Talos will also add all the parameters
 passed by the client to the Hiera scope.
+
+The `ssl` option defaults to enabled. When disabled, the `fqdn` query parameter
+is used to determine scopes rather than the client certificate.
 
 Hiera
 -----

@@ -4,7 +4,7 @@ Talos
 [![Gem Version](https://badge.fury.io/rb/talos.svg)](http://badge.fury.io/rb/talos)
 [![Build Status](https://travis-ci.org/spotify/talos.png?branch=master)](https://travis-ci.org/spotify/talos)
 
-Talos is a rack application which servers Hiera yaml files over HTTP.
+Talos is a rack application which serves Hiera yaml files over HTTP.
 It authorizes clients based on the SSL certificates issued by the Puppet CA and returns only the files in the
 [Hiera scope](https://docs.puppetlabs.com/hiera/3.0/command_line.html#json-and-yaml-scopes).
 

@@ -3,7 +3,7 @@ rvm:
 - 1.9.3
 - 2.3.0
 - jruby-19mode
-- rbx-3
+
 deploy:
   provider: rubygems
   on:

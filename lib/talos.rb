@@ -100,7 +100,8 @@ class Talos < Sinatra::Base
   end
 
   get '/' do
-    fqdn = (settings.development? || !settings.talos['ssl']) ? params[:fqdn] : request.env['HTTP_SSL_CLIENT_S_DN_CN']
+    fqdn_env = request.env['HTTP_SSL_CLIENT_S_DN_CN'] ? request.env['HTTP_SSL_CLIENT_S_DN_CN'] : request.env['SSL_CLIENT_S_DN_CN'] 
+    fqdn = (settings.development? || !settings.talos['ssl']) ? params[:fqdn] : fqdn_env
     scope = get_scope(fqdn)
     files_to_pack = files_in_scope(scope)
     archive = compress_files(files_to_pack)

@@ -10,4 +10,4 @@ deploy:
     tags: true
   api_key:
     secure: XFUKxH18R6lT5In7phyVsL3a5mcESrssD2dlNrQvC2TXeBGif+0sSSt7ZfRuFve5XB0Wa8ruClFxRr0uMXRqUZUKc1/VbLM2DnLLkruK8pwdu2oQI3JMdcDtMmVsVxvJViAAy3ibuKuCTF2NbU+Yg/VrwMNU+aN63zsDR44t1IU=
-dist: trusty
+dist: xenial

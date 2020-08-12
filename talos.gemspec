@@ -14,6 +14,7 @@ Gem::Specification.new do |s|
   s.require_paths = ['lib']
 
   s.add_dependency 'rack', '2.2.3'
+  s.add_dependency 'rack-test', '~> 1.1.0'
   s.add_dependency 'sinatra', '~> 2.0.8'
   s.add_dependency 'hiera', '~> 3.6.0'
   s.add_dependency 'archive-tar-minitar', '~> 0.5.2'

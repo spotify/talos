@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
   s.test_files    = s.files.grep(%r{^(test|spec|features)/})
   s.require_paths = ['lib']
 
-  s.add_dependency 'rack', '1.6.12'
+  s.add_dependency 'rack', '2.2.3'
   s.add_dependency 'sinatra', '~> 1.4.7'
   s.add_dependency 'hiera', '~> 3.2.0'
   s.add_dependency 'archive-tar-minitar', '~> 0.5.2'

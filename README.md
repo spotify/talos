@@ -6,7 +6,7 @@ Talos
 
 Talos is a rack application which serves Hiera yaml files over HTTP.
 It authorizes clients based on the SSL certificates issued by the Puppet CA and returns only the files in the
-[Hiera scope](https://docs.puppetlabs.com/hiera/3.0/command_line.html#json-and-yaml-scopes).
+[Hiera scope](https://github.com/puppetlabs/docs-archive/blob/master/hiera/3.3/command_line.markdown#json-and-yaml-scopes).
 
 Talos is used to store and distribute secrets via Hiera to the masterless puppet clients.
 

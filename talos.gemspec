@@ -1,5 +1,5 @@
 Gem::Specification.new do |s|
-  s.version       = '1.0.2'
+  s.version       = '1.0.3'
   s.name          = 'talos'
   s.authors       = ['Alexey Lapitsky', 'Johan Haals', 'Wasabi']
   s.email         = 'wasabi@spotify.com'
@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
   s.test_files    = s.files.grep(%r{^(test|spec|features)/})
   s.require_paths = ['lib']
 
-  s.add_dependency 'rack', '2.2.3.1'
+  s.add_dependency 'rack', '2.2.6.2'
   s.add_dependency 'sinatra', '~> 2.2.0'
   s.add_dependency 'hiera', '~> 3.6.0'
   s.add_dependency 'minitar', '~> 0.9'

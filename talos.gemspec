@@ -1,5 +1,5 @@
 Gem::Specification.new do |s|
-  s.version       = '1.0.3'
+  s.version       = '1.0.4'
   s.name          = 'talos'
   s.authors       = ['Alexey Lapitsky', 'Johan Haals', 'Wasabi']
   s.email         = 'wasabi@spotify.com'

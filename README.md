@@ -1,8 +1,10 @@
 Talos
 =====
 
+*After faithfully serving Spotify with secrets for 10 years Talos has now been sunset and will not see any new releases.*
+
+
 [![Gem Version](https://badge.fury.io/rb/talos.svg)](http://badge.fury.io/rb/talos)
-[![Build Status](https://travis-ci.org/spotify/talos.png?branch=master)](https://travis-ci.org/spotify/talos)
 
 Talos is a rack application which serves Hiera yaml files over HTTP.
 It authorizes clients based on the SSL certificates issued by the Puppet CA and returns only the files in the
